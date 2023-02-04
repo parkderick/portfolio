@@ -1,6 +1,6 @@
 const sizes = {
   sm: {
-    fontSize: "12px",
+    fontSize: "14px",
   },
 };
 
