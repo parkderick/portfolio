@@ -4,8 +4,10 @@ const baseStyle = {
     height: "min-content",
   },
   tabpanel: {
-    padding: 0,
-    marginLeft: 10,
+    padding: {
+      base: '16px 0px 0px 0px',
+      md: '0px 0px 0px 12px',
+    },
   },
   tab: {
     fontFamily: '"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace',

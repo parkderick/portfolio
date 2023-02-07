@@ -8,6 +8,7 @@ import {
   TabPanel,
   UnorderedList,
   ListItem,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { Pointer } from "src/components/shared/Pointer";
 import SectionHeader from "src/components/shared/SectionHeader";
@@ -19,10 +20,11 @@ import { IJobExperience } from "src/schema/types";
 import { SFMono } from "src/general/Text";
 
 export default function Experience(): JSX.Element {
+  const [isDesktopView] = useMediaQuery("(min-width: 48em)");
   return (
     <SectionContainer id={NAV_EXPERIENCE_ID}>
       <SectionHeader number="02." title={`Experience`} />
-      <Tabs orientation="vertical">
+      <Tabs orientation={isDesktopView ? "vertical" : "horizontal"}>
         <TabList borderColor="navy.200">
           <Tab whiteSpace="nowrap" fontSize={14}>
             Axiom Zen
@@ -129,8 +131,6 @@ export default function Experience(): JSX.Element {
     </SectionContainer>
   );
 }
-
-
 
 function JobExperience({
   position,

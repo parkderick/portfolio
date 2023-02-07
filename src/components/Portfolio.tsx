@@ -1,6 +1,6 @@
-import { Box, Icon, Flex, Image, Link } from "@chakra-ui/react";
+import { Box, Icon, Flex, Image, Link, Grid } from "@chakra-ui/react";
 import { H3 } from "src/general/Heading";
-import { FiGithub } from "react-icons/fi";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 import SectionHeader from "src/components/shared/SectionHeader";
 import { NAV_PORTFOLIO_ID } from "./NavBar";
 import SectionContainer from "src/components/shared/SectionContainer";
@@ -12,6 +12,7 @@ interface IProject {
   stack: string[];
   image: string;
   href: string;
+  github: string;
 }
 
 const PROJECTS: IProject[] = [
@@ -23,13 +24,13 @@ const PROJECTS: IProject[] = [
     stack: [
       "Typescript",
       "React",
-      "Apollo Client",
       "ChakraUI",
       "NextJS",
       "GraphQL",
     ],
     image: "/geniessc1.png",
     href: "https://warehouse.genies.com/collection",
+    github: "https://github.com/dapperlabs/genies-app",
   },
   {
     company: "Dapper Labs",
@@ -39,6 +40,7 @@ const PROJECTS: IProject[] = [
     stack: ["Typescript", "React", "NextJS"],
     image: "/laligasc1.png",
     href: "https://laligagolazos.com/",
+    github: "https://github.com/dapperlabs/laliga-landing",
   },
   {
     company: "Dapper Labs",
@@ -48,13 +50,13 @@ const PROJECTS: IProject[] = [
     stack: [
       "Typescript",
       "React",
-      "Apollo Client",
       "ChakraUI",
       "NextJS",
       "GraphQL",
     ],
     image: "/dappercreatorsc1.png",
     href: "https://genesis.seedsofhappiness.io/SeedsOfHappinessGenesis",
+    github: "https://github.com/dapperlabs/dapper-creator-platforms-app",
   },
   {
     company: "Axiom Zen",
@@ -71,6 +73,7 @@ const PROJECTS: IProject[] = [
     ],
     image: "/tobyappsc1.png",
     href: "https://chrome.google.com/webstore/detail/toby-for-chrome/hddnkoipeenegfoeaoibdmnaalmgkpip?hl=en",
+    github: "https://github.com/axiomzen/toby",
   },
   {
     company: "Axiom Zen",
@@ -87,6 +90,7 @@ const PROJECTS: IProject[] = [
     ],
     image: "/tobywebsitesc1.png",
     href: "https://gettoby.com/",
+    github: "https://github.com/axiomzen/toby-landing",
   },
 ];
 
@@ -94,12 +98,19 @@ export default function Portfolio(): JSX.Element {
   return (
     <SectionContainer id={NAV_PORTFOLIO_ID}>
       <SectionHeader number="03." title={`Portfolio`} />
-      {PROJECTS.map((project, index) => (
-        <Project key={index} index={index} project={project} />
-      ))}
+      <Flex flexDirection="column" gap={{ base: "70px", lg: "120px" }}>
+        {PROJECTS.map((project, index) => (
+          <Project key={index} index={index} project={project} />
+        ))}
+      </Flex>
     </SectionContainer>
   );
 }
+
+const LEFT_SIDE_IMAGE_COLUMN = "1 / span 7";
+const RIGHT_SIDE_IMAGE_COLUMN = "6 / span 7";
+const LEFT_SIDE_CONTENT_COLUMN = "1 / span 7";
+const RIGHT_SIDE_CONTENT_COLUMN = "6 / span 7";
 
 function Project({
   project,
@@ -108,11 +119,13 @@ function Project({
   project: IProject;
   index: number;
 }): JSX.Element {
-  const { company, title, description, stack, image, href } = project;
+  const { company, title, description, stack, image, href, github } = project;
   const isEven = index % 2 === 0;
+
   return (
-    <Flex flexDirection={isEven ? "row" : "row-reverse"}>
+    <Grid gridTemplateColumns="repeat(12, 1fr)">
       <Link
+        isExternal
         href={href}
         borderRadius={4}
         position="relative"
@@ -130,14 +143,25 @@ function Project({
             mixBlendMode: "normal",
           },
         }}
+        gridColumn={{
+          base: "1 / -1",
+          lg: isEven ? LEFT_SIDE_IMAGE_COLUMN : RIGHT_SIDE_IMAGE_COLUMN,
+        }}
+        gridRow="1/1"
       >
         <Box
           className="image-container"
           transition="all 0.1s cubic-bezier(0.645,0.045,0.355,1)"
           mixBlendMode="multiply"
-          filter="grayscale(100%) contrast(1) brightness(100%)"
+          filter={{
+            base: "grayscale(100%) contrast(1) brightness(20%)",
+            lg: "grayscale(100%) contrast(1) brightness(100%)",
+          }}
+          height="100%"
+          boxShadow="0 10px 30px -15px"
+          color="navy.100"
         >
-          <Image alt={title} src={image} w="600px" h="350px" />
+          <Image alt={title} src={image} objectFit="cover" height="100%" />
         </Box>
         <Box
           transition="all 0.25s cubic-bezier(0.645,0.045,0.355,1)"
@@ -150,21 +174,33 @@ function Project({
           className="overlay"
         ></Box>
       </Link>
-      <Box position="relative" width="100%">
+      <Box
+        position="relative"
+        width="100%"
+        gridColumn={{
+          base: "1 / -1",
+          lg: isEven ? RIGHT_SIDE_CONTENT_COLUMN : LEFT_SIDE_CONTENT_COLUMN,
+        }}
+        gridRow="1/1"
+        padding={{
+          base: "40px 40px 30px",
+          lg: 0,
+        }}
+      >
         <Flex
           flexDirection="column"
-          alignItems={isEven ? "flex-end" : "flex-start"}
-          position="absolute"
-          width="110%"
-          right={isEven ? "0%" : "auto"}
-          left={isEven ? "auto" : "0%"}
+          alignItems={{
+            base: "flex-start",
+            lg: isEven ? "flex-end" : "flex-start",
+          }}
+          width="100%"
           gap={2}
         >
           <Text color="green.200">{company}</Text>
           <H3 color="slate.100">{title}</H3>
           <Box
-            bg="navy.300"
-            padding={5}
+            bg={{ base: "transparent", lg: "navy.300" }}
+            padding={{ base: 0, lg: 5 }}
             boxShadow="0 10px 30px -15px"
             color="navy.100"
             my={2}
@@ -177,13 +213,16 @@ function Project({
               <>{tech}&nbsp;</>
             ))}
           </SFMono>
-          <Flex color="slate.100">
-            <Link href="https://www.github.com" isExternal>
-              <Icon as={FiGithub} />
+          <Flex color="slate.100" gap={4}>
+            <Link href={github} isExternal>
+              <Icon boxSize={5} as={FiGithub} />
+            </Link>
+            <Link href={href} isExternal>
+              <Icon boxSize={5} as={FiExternalLink} />
             </Link>
           </Flex>
         </Flex>
       </Box>
-    </Flex>
+    </Grid>
   );
 }
