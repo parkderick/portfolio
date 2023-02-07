@@ -1,13 +1,16 @@
 const baseStyle = {
   tablist: {
     color: "slate.300",
-    height: 'min-content'
+    height: "min-content",
   },
   tabpanel: {
     padding: 0,
+    marginLeft: 10,
   },
   tab: {
+    fontFamily: '"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace',
     opacity: 0.5,
+    justifyContent: 'flex-start',
     _active: {
       bg: "inherit",
     },

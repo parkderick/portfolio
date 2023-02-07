@@ -13,11 +13,12 @@ export function Pointer({
         content: '"▹"',
         position: "absolute",
         left: "0px",
-        top: "2px",
+        top: "4px",
         color: "green.200",
-        fontSize: "12px",
-        lineHeight: "12px",
+        fontSize: "16px",
+        lineHeight: "16px",
       }}
+      size='xmd'
       position="relative"
       paddingLeft={5}
       display="flex"

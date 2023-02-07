@@ -16,7 +16,7 @@ export default function About(): JSX.Element {
         gap={10}
       >
         <Flex flexDirection="column">
-          <Text>
+          <Text >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -24,9 +24,14 @@ export default function About(): JSX.Element {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
+            <br />
+            <br />
+            Here are a few technologies I’ve been working with recently:
+            <br />
+            <br />
           </Text>
-          <Grid gridTemplateColumns="repeat(2, 1fr)">
-            <SFMonoPointer size="sm">Typescript</SFMonoPointer>
+          <Grid gridTemplateColumns="repeat(2, 1fr)" gridGap={2}>
+            <SFMonoPointer>Typescript</SFMonoPointer>
             <SFMonoPointer>GraphQL</SFMonoPointer>
             <SFMonoPointer>NextJS</SFMonoPointer>
             <SFMonoPointer>ReduxJS</SFMonoPointer>

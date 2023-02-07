@@ -9,21 +9,27 @@ import {
   UnorderedList,
   ListItem,
 } from "@chakra-ui/react";
-import JobExperience from "src/components/shared/JobExperience";
 import { Pointer } from "src/components/shared/Pointer";
 import SectionHeader from "src/components/shared/SectionHeader";
 import { NAV_EXPERIENCE_ID } from "./NavBar";
 import SectionContainer from "src/components/shared/SectionContainer";
-import { Text, SFMono } from "src/general/Text";
+import { Text } from "src/general/Text";
+import { H4 } from "src/general/Heading";
+import { IJobExperience } from "src/schema/types";
+import { SFMono } from "src/general/Text";
 
 export default function Experience(): JSX.Element {
   return (
     <SectionContainer id={NAV_EXPERIENCE_ID}>
       <SectionHeader number="02." title={`Experience`} />
       <Tabs orientation="vertical">
-        <TabList>
-          <Tab whiteSpace="nowrap">Axiom Zen</Tab>
-          <Tab whiteSpace="nowrap">Dapper Labs</Tab>
+        <TabList borderColor="navy.200">
+          <Tab whiteSpace="nowrap" fontSize={14}>
+            Axiom Zen
+          </Tab>
+          <Tab whiteSpace="nowrap" fontSize={14}>
+            Dapper Labs
+          </Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -57,9 +63,9 @@ export default function Experience(): JSX.Element {
                     Translated all styles in stylesheets into 19 highly reusable
                     UI components built upon Chakra UI.
                   </Pointer>
-                  <SFMono size="sm" alignSelf="flex-end">
+                  {/* <SFMono size="sm" alignSelf="flex-end">
                     Javascript React ReduxJS ChakraUI Webpack RESTAPIs
-                  </SFMono>
+                  </SFMono> */}
                 </>
               }
             />
@@ -73,7 +79,7 @@ export default function Experience(): JSX.Element {
                 <>
                   <Pointer>
                     <Flex flexDirection="column">
-                      <Text>
+                      <Text size="xmd">
                         Developed 3 Dapper Labs products alongside an agile team
                         of 10:
                       </Text>
@@ -111,9 +117,9 @@ export default function Experience(): JSX.Element {
                     Maintained and updated the GraphQL layer to allow retrieval
                     and updates of user interactions with Firebase database.
                   </Pointer>
-                  <SFMono size="sm" alignSelf="flex-end">
+                  {/* <SFMono size="sm" alignSelf="flex-end">
                     Typescript React Apollo ChakraUI NextJS GraphQL Firebase
-                  </SFMono>
+                  </SFMono> */}
                 </>
               }
             />
@@ -121,5 +127,31 @@ export default function Experience(): JSX.Element {
         </TabPanels>
       </Tabs>
     </SectionContainer>
+  );
+}
+
+
+
+function JobExperience({
+  position,
+  company,
+  employmentDate,
+  responsibilities,
+}: IJobExperience): JSX.Element {
+  return (
+    <Flex flexDirection="column">
+      <H4 color="slate.100">
+        {position}
+        <H4 display="inline-flex" color="green.200">
+          &nbsp;@ {company}
+        </H4>
+      </H4>
+      <SFMono size="sm" marginTop={2}>
+        {employmentDate}
+      </SFMono>
+      <Flex marginTop={4} flexDirection="column" gap={3}>
+        {responsibilities}
+      </Flex>
+    </Flex>
   );
 }
