@@ -6,14 +6,14 @@ import { Text } from "src/general/Text";
 
 export default function Contact(): JSX.Element {
   return (
-    <SectionContainer id={NAV_CONTACT_ID} alignItems="center" gap={4}>
+    <SectionContainer id={NAV_CONTACT_ID} gap={4}>
       <SectionHeader number="04." title={`Let's connect`} />
-      <Text textAlign="center">
-        Just feel free to contact if you wanna collaborate with me, or simply
-        have a conversation. Let's Connect!
+      <Text>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
       </Text>
       <Link marginTop={10}>
-        <Button>Say Hello</Button>
+        <Button>Contact</Button>
       </Link>
     </SectionContainer>
   );

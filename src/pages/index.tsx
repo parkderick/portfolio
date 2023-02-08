@@ -6,6 +6,8 @@ import Experience from "src/components/Experience";
 import About from "src/components/About";
 import Hero from "src/components/Hero";
 import NavBar from "src/components/NavBar";
+import Socials from "src/components/Socials";
+import Footer from "src/components/Footer";
 
 export default function Home() {
   return (
@@ -19,12 +21,14 @@ export default function Home() {
       <main>
         <Box>
           <NavBar />
-          <Container maxW="1100px" px={{base: '50px', md: '100px'}}>
+          <Container maxW="1100px" px={{ base: "50px", md: "100px" }}>
             <Hero />
             <About />
             <Experience />
             <Portfolio />
             <Contact />
+            <Socials />
+            <Footer />
           </Container>
         </Box>
       </main>
