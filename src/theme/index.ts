@@ -8,8 +8,11 @@ import Text from "./text";
 const theme = {
   styles: {
     global: {
+      ["*"]: {
+        scrollBehavior: "smooth !important",
+      },
       html: {
-        scrollBehavior: "smooth",
+        overflowX: "hidden",
       },
       body: {
         color: "slate.300",

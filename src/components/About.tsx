@@ -1,22 +1,25 @@
-import { Flex, Image, Grid } from "@chakra-ui/react";
+import { Flex, Grid } from "@chakra-ui/react";
 import { SFMonoPointer } from "src/components/shared/Pointer";
 import SectionHeader from "src/components/shared/SectionHeader";
 import { NAV_ABOUT_ID } from "./NavBar";
 import SectionContainer from "src/components/shared/SectionContainer";
 import { Text } from "src/general/Text";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 export default function About(): JSX.Element {
   return (
-    <SectionContainer id={NAV_ABOUT_ID}>
-      <SectionHeader number="01." title={`About Me`} />
+    <SectionContainer id={NAV_ABOUT_ID} >
+      <SectionHeader number="01." title={`About Me`}  data-aos="fade-up"/>
       <Grid
         color="slate.300"
         justifyItems="center"
         gridTemplateColumns={{ base: "1fr", md: "2fr 1fr" }}
         gap={10}
+        data-aos="fade-up"
+        data-aos-delay={200}
       >
         <Flex flexDirection="column">
-          <Text >
+          <Text>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -39,13 +42,14 @@ export default function About(): JSX.Element {
             <SFMonoPointer>Chakra UI</SFMonoPointer>
           </Grid>
         </Flex>
-        <Image
-          alt="Portrait"
-          src="/portrait.jpeg"
-          minW={300}
-          minH={300}
-          w={300}
-          h={300}
+        <Player
+          autoplay
+          loop
+          src="/lottie.json"
+          style={{
+            height: "400px",
+            width: "400px",
+          }}
         />
       </Grid>
     </SectionContainer>

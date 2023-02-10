@@ -6,19 +6,27 @@ export default function Hero(): JSX.Element {
   return (
     <Flex alignItems="center" height="100vh">
       <Flex flexDirection="column" gap={8}>
-        <SFMono color="green.200">Hi, my name is</SFMono>
+        <SFMono color="green.200" data-aos="fade-down" data-aos-delay={600}>
+          Hi, my name is
+        </SFMono>
         <Box>
-          <H1 color="slate.100">Derick Park.</H1>
-          <H1>I build things for the web.</H1>
+          <H1 color="slate.100" data-aos="fade-down" data-aos-delay={700}>
+            Derick Park.
+          </H1>
+          <H1 data-aos="fade-down" data-aos-delay={800}>
+            I build things for the web.
+          </H1>
         </Box>
-        <Text maxWidth={540}>
+        <Text maxWidth={540} data-aos="fade-down" data-aos-delay={900}>
           I am a software engineer specialized in building beautiful
           applications using modern frontend and backend technologies! My
           passion for software engineering really stems from my passion to think
           critically and solve problems, all while being able to stay in
           creative control.
         </Text>
-        <Button>Resume</Button>
+        <Button data-aos="fade-down" data-aos-delay={1000}>
+          Resume
+        </Button>
       </Flex>
     </Flex>
   );

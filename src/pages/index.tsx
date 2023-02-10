@@ -8,8 +8,15 @@ import Hero from "src/components/Hero";
 import NavBar from "src/components/NavBar";
 import Socials from "src/components/Socials";
 import Footer from "src/components/Footer";
-
+import { useEffect } from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";
 export default function Home() {
+
+  useEffect(() => {
+    setTimeout(() => AOS.init(), 100);
+  }, []);
+  
   return (
     <>
       <Head>
@@ -21,7 +28,7 @@ export default function Home() {
       <main>
         <Box>
           <NavBar />
-          <Container maxW="1100px" px={{ base: "50px", md: "100px" }}>
+          <Container maxW="1300px" px={{ base: "50px", md: "150px" }}>
             <Hero />
             <About />
             <Experience />

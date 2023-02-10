@@ -6,10 +6,10 @@ interface ISectionHeader {
   number: string;
   title: string;
 }
-export default function SectionHeader({ number, title }: ISectionHeader) {
+export default function SectionHeader({ number, title, ...otherProps }: ISectionHeader) {
   return (
-    <Flex alignItems="center" gap={2}>
-      <SFMono fontSize={24} color="green.200" marginTop="auto">
+    <Flex alignItems="center" gap={2} {...otherProps}>
+      <SFMono fontSize={22} color="green.200" marginTop="auto">
         {number}
       </SFMono>
       <H2 display="inline" whiteSpace="nowrap" color="slate.100">

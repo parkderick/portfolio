@@ -1,0 +1,46 @@
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes hexagon-anim {
+  from {
+    stroke: #64ffda;
+  }
+  to {
+    stroke: #64ffda;
+    stroke-dashoffset: 0;
+  }
+}
+
+#logo {
+  margin-right: auto;
+}
+
+#logo:hover {
+  fill: rgba(100,255,218,0.1);
+}
+
+#logo path:nth-child(1) {
+  stroke: #64ffda;
+  stroke-width: 1.5;
+  stroke-dasharray: 55;
+  stroke-dashoffset: 55;
+  animation: line-anim 1s ease forwards 1.5s;
+}
+
+#logo path:nth-child(2) {
+  stroke: #64ffda;
+  stroke-width: 1.5;
+  stroke-dasharray: 55;
+  stroke-dashoffset: 55;
+  animation: line-anim 1s ease forwards 1.5s;
+}
+
+#logo path:nth-child(3) {
+  stroke-width: 3;
+  stroke-dasharray: 116;
+  stroke-dashoffset: 116;
+  animation: hexagon-anim 1s ease forwards 1.75s;
+}

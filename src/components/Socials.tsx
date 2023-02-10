@@ -33,7 +33,7 @@ export default function Socials(): JSX.Element | null {
     return (
       <>
         {/* Social Media */}
-        <FixedContent left={5}>
+        <FixedContent left={5} data-aos="fade-right">
           {SOCIALS.map(({ href, icon }, index) => (
             <Link href={href} isExternal key={index}>
               <Icon boxSize={5} as={icon} />
@@ -42,7 +42,7 @@ export default function Socials(): JSX.Element | null {
         </FixedContent>
 
         {/* Email */}
-        <FixedContent right={5}>
+        <FixedContent right={5} data-aos="fade-left" >
           <SFMono size="sm" sx={{ writingMode: "vertical-rl" }}>
             derickminsoopark@gmail.com
           </SFMono>
@@ -66,6 +66,7 @@ function FixedContent({
       bottom={0}
       alignItems="center"
       gap={4}
+      data-aos-delay={1100}
       {...otherProps}
     >
       {children}

@@ -14,6 +14,7 @@ import { Link } from "src/general/Link";
 import { useMediaQuery } from "@chakra-ui/react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { SFMono } from "src/general/Text";
+import Logo from "./shared/Logo";
 
 const SCROLL_STATE_TOP = "SCROLL_STATE_TOP";
 const SCROLL_STATE_DOWN = "SCROLL_STATE_DOWN";
@@ -70,7 +71,6 @@ export default function NavBar() {
     <Flex
       padding="0 40px"
       alignItems="center"
-      gap={4}
       position="fixed"
       width="100%"
       transition="all 0.25s cubic-bezier(0.645,0.045,0.355,1)"
@@ -88,18 +88,23 @@ export default function NavBar() {
           ? "drop-shadow(0 10px 30px rgba(2,12,27,0.7))"
           : "none"
       }
+      justifyContent="space-between"
     >
-      <Text marginRight="auto">Logo</Text>
+      <Logo />
       {isDesktopView ? (
         <>
-          {NAV_LINKS.map((link, index) => (
-            <NavLink {...link} key={index} index={index} />
-          ))}
-          <Button>Resume</Button>
+          <Flex gap={5} alignItems='center'>
+            {NAV_LINKS.map((link, index) => (
+              <NavLink {...link} key={index} index={index} />
+            ))}
+            <Button data-aos="fade-down" data-aos-delay={500}>
+              Resume
+            </Button>
+          </Flex>
         </>
       ) : (
         <>
-          <Button variant="unstyled">
+          <Button variant="unstyled" data-aos="fade-down">
             <RxHamburgerMenu
               size={40}
               ref={btnRef}
@@ -141,7 +146,7 @@ export default function NavBar() {
 }
 
 interface INavLink {
-  index: string;
+  index: number;
   text: string;
   href: string;
 }
@@ -158,6 +163,8 @@ function NavLink({ index, text, href }: INavLink): JSX.Element {
           color: "green.200",
           fontSize: { base: "16px", md: "12px" },
         }}
+        data-aos="fade-down"
+        data-aos-delay={(index + 1) * 100}
       >
         {text}
       </SFMono>

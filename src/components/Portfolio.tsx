@@ -21,13 +21,7 @@ const PROJECTS: IProject[] = [
     title: "Genies Warehouse",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    stack: [
-      "Typescript",
-      "React",
-      "ChakraUI",
-      "NextJS",
-      "GraphQL",
-    ],
+    stack: ["Typescript", "React", "ChakraUI", "NextJS", "GraphQL"],
     image: "/geniessc1.png",
     href: "https://warehouse.genies.com/collection",
     github: "https://github.com/dapperlabs/genies-app",
@@ -47,13 +41,7 @@ const PROJECTS: IProject[] = [
     title: "Dapper Creator",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    stack: [
-      "Typescript",
-      "React",
-      "ChakraUI",
-      "NextJS",
-      "GraphQL",
-    ],
+    stack: ["Typescript", "React", "ChakraUI", "NextJS", "GraphQL"],
     image: "/dappercreatorsc1.png",
     href: "https://genesis.seedsofhappiness.io/SeedsOfHappinessGenesis",
     github: "https://github.com/dapperlabs/dapper-creator-platforms-app",
@@ -97,7 +85,7 @@ const PROJECTS: IProject[] = [
 export default function Portfolio(): JSX.Element {
   return (
     <SectionContainer id={NAV_PORTFOLIO_ID}>
-      <SectionHeader number="03." title={`Portfolio`} />
+      <SectionHeader number="03." title={`Portfolio`} data-aos="fade-up" />
       <Flex flexDirection="column" gap={{ base: "70px", lg: "120px" }}>
         {PROJECTS.map((project, index) => (
           <Project key={index} index={index} project={project} />
@@ -108,9 +96,9 @@ export default function Portfolio(): JSX.Element {
 }
 
 const LEFT_SIDE_IMAGE_COLUMN = "1 / span 7";
-const RIGHT_SIDE_IMAGE_COLUMN = "6 / span 7";
-const LEFT_SIDE_CONTENT_COLUMN = "1 / span 7";
-const RIGHT_SIDE_CONTENT_COLUMN = "6 / span 7";
+const RIGHT_SIDE_IMAGE_COLUMN = "6 / -1";
+const LEFT_SIDE_CONTENT_COLUMN = "1 / 7";
+const RIGHT_SIDE_CONTENT_COLUMN = "7 / -1";
 
 function Project({
   project,
@@ -123,7 +111,11 @@ function Project({
   const isEven = index % 2 === 0;
 
   return (
-    <Grid gridTemplateColumns="repeat(12, 1fr)">
+    <Grid
+      gridTemplateColumns="repeat(12, 1fr)"
+      data-aos={isEven ? "fade-right" : "fade-left"}
+      data-aos-delay={100}
+    >
       <Link
         isExternal
         href={href}
