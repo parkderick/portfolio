@@ -8,15 +8,17 @@ import Hero from "src/components/Hero";
 import NavBar from "src/components/NavBar";
 import Socials from "src/components/Socials";
 import Footer from "src/components/Footer";
-import { useEffect } from "react";
-import "aos/dist/aos.css";
+import Loader from "src/components/Loader";
+import { useEffect, useState } from "react";
 import AOS from "aos";
+import "aos/dist/aos.css";
 export default function Home() {
 
+  const [isLoader, setIsLoader] = useState(true);
   useEffect(() => {
     setTimeout(() => AOS.init(), 100);
+    setTimeout(() => setIsLoader(false), 3000);
   }, []);
-  
   return (
     <>
       <Head>
@@ -26,18 +28,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Box>
-          <NavBar />
-          <Container maxW="1300px" px={{ base: "50px", md: "150px" }}>
-            <Hero />
-            <About />
-            <Experience />
-            <Portfolio />
-            <Contact />
-            <Socials />
-            <Footer />
-          </Container>
-        </Box>
+        {isLoader ? (
+          <Loader />
+        ) : (
+          <Box>
+            <NavBar />
+            <Container maxW="1300px" px={{ base: "50px", md: "150px" }}>
+              <Hero />
+              <About />
+              <Experience />
+              <Portfolio />
+              <Contact />
+              <Socials />
+              <Footer />
+            </Container>
+          </Box>
+        )}
       </main>
     </>
   );

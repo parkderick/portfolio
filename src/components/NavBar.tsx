@@ -14,7 +14,7 @@ import { Link } from "src/general/Link";
 import { useMediaQuery } from "@chakra-ui/react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { SFMono } from "src/general/Text";
-import Logo from "./shared/Logo";
+import { Logo } from "./shared/Logo";
 
 const SCROLL_STATE_TOP = "SCROLL_STATE_TOP";
 const SCROLL_STATE_DOWN = "SCROLL_STATE_DOWN";
@@ -93,7 +93,7 @@ export default function NavBar() {
       <Logo />
       {isDesktopView ? (
         <>
-          <Flex gap={5} alignItems='center'>
+          <Flex gap={5} alignItems="center">
             {NAV_LINKS.map((link, index) => (
               <NavLink {...link} key={index} index={index} />
             ))}
