@@ -106,17 +106,16 @@ export default function NavBar() {
         </>
       ) : (
         <>
-          <Button variant="unstyled" data-aos="fade-down" padding={0}>
-            <RxHamburgerMenu
-              size={40}
-              ref={btnRef}
-              onClick={onOpen}
-              color="#64ffda"
-              pointer="cursor"
-              _hover={{
-                opacity: 0.1,
-              }}
-            />
+          <Button
+            variant="unstyled"
+            data-aos="fade-down"
+            padding={0}
+            ref={btnRef}
+            _hover={{
+              opacity: 0.1,
+            }}
+          >
+            <RxHamburgerMenu size={40} onClick={onOpen} color="#64ffda" />
           </Button>
           <Drawer
             isOpen={isOpen}
