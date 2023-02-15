@@ -125,7 +125,7 @@ export default function NavBar() {
           >
             <DrawerOverlay />
             <DrawerContent bgColor="navy.300">
-              <DrawerCloseButton size={80} right={4} top={4} />
+              <DrawerCloseButton right={4} top={4} />
               <DrawerBody
                 display="flex"
                 flexDirection="column"
