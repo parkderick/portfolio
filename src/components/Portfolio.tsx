@@ -22,7 +22,7 @@ const PROJECTS: IProject[] = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     stack: ["Typescript", "React", "ChakraUI", "NextJS", "GraphQL"],
-    image: "/geniessc1.png",
+    image: "assets/geniessc1.png",
     href: "https://warehouse.genies.com/collection",
     github: "https://github.com/dapperlabs/genies-app",
   },
@@ -32,7 +32,7 @@ const PROJECTS: IProject[] = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     stack: ["Typescript", "React", "NextJS"],
-    image: "/laligasc1.png",
+    image: "assets/laligasc1.png",
     href: "https://laligagolazos.com/",
     github: "https://github.com/dapperlabs/laliga-landing",
   },
@@ -42,7 +42,7 @@ const PROJECTS: IProject[] = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     stack: ["Typescript", "React", "ChakraUI", "NextJS", "GraphQL"],
-    image: "/dappercreatorsc1.png",
+    image: "assets/dappercreatorsc1.png",
     href: "https://genesis.seedsofhappiness.io/SeedsOfHappinessGenesis",
     github: "https://github.com/dapperlabs/dapper-creator-platforms-app",
   },
@@ -59,7 +59,7 @@ const PROJECTS: IProject[] = [
       "Webpack",
       "REST APIs",
     ],
-    image: "/tobyappsc1.png",
+    image: "assets/tobyappsc1.png",
     href: "https://chrome.google.com/webstore/detail/toby-for-chrome/hddnkoipeenegfoeaoibdmnaalmgkpip?hl=en",
     github: "https://github.com/axiomzen/toby",
   },
@@ -76,7 +76,7 @@ const PROJECTS: IProject[] = [
       "Webpack",
       "Poet",
     ],
-    image: "/tobywebsitesc1.png",
+    image: "assets/tobywebsitesc1.png",
     href: "https://gettoby.com/",
     github: "https://github.com/axiomzen/toby-landing",
   },
@@ -205,7 +205,7 @@ function Project({
               <>{tech}&nbsp;</>
             ))}
           </SFMono>
-          <Flex color="slate.100" gap={4}>
+          <Flex color="slate.100" gap={4} marginTop={4}>
             <Link href={github} isExternal>
               <Icon boxSize={5} as={FiGithub} />
             </Link>

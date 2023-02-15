@@ -5,9 +5,13 @@ const baseStyle = {
   color: "green.200",
   background: "transparent !",
   backgroundColor: "transparent",
-  padding: "1.25rem 1.75rem !",
   fontSize: "14px !",
   width: "min-content",
+  fontWeight: 300,
+  padding: "0.75rem 1rem !",
+  _hover: {
+    backgroundColor: "green.100 !",
+  },
 };
 
 export default {
@@ -15,7 +19,7 @@ export default {
   variants: {
     unstyled: {
       border: "0px solid",
-      padding: "0 !",
+      padding: "0 !important",
     },
   },
 };

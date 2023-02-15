@@ -1,5 +1,6 @@
 import { Box, Flex, Button } from "@chakra-ui/react";
 import { H1 } from "src/general/Heading";
+import { Link } from "src/general/Link";
 import { Text, SFMono } from "src/general/Text";
 
 export default function Hero(): JSX.Element {
@@ -24,9 +25,11 @@ export default function Hero(): JSX.Element {
           critically and solve problems, all while being able to stay in
           creative control.
         </Text>
-        <Button data-aos="fade-down" data-aos-delay={1000}>
-          Resume
-        </Button>
+        <Link download href="/assets/Resume.pdf" isExternal>
+          <Button data-aos="fade-down" data-aos-delay={1000}>
+            Resume
+          </Button>
+        </Link>
       </Flex>
     </Flex>
   );

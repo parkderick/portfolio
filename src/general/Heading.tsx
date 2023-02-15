@@ -10,20 +10,29 @@ export type HeadingProps = {
 
 export const H1 = (props: HeadingProps) => {
   const { ...baseHeadingProps } = props;
-  return <BaseHeading size="xl" {...baseHeadingProps} />;
+  return (
+    <BaseHeading
+      as="h1"
+      size={{
+        base: "xl",
+        md: "xxl",
+      }}
+      {...baseHeadingProps}
+    />
+  );
 };
 
 export const H2 = (props: HeadingProps) => {
   const { ...baseHeadingProps } = props;
-  return <BaseHeading size="lg" {...baseHeadingProps} />;
+  return <BaseHeading as="h2" size="lg" {...baseHeadingProps} />;
 };
 
 export const H3 = (props: HeadingProps) => {
   const { ...baseHeadingProps } = props;
-  return <BaseHeading size="md" {...baseHeadingProps} />;
+  return <BaseHeading as="h3" size="md" {...baseHeadingProps} />;
 };
 
 export const H4 = (props: HeadingProps) => {
   const { ...baseHeadingProps } = props;
-  return <BaseHeading size="sm" {...baseHeadingProps} />;
+  return <BaseHeading as="h4" size="sm" {...baseHeadingProps} />;
 };

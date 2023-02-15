@@ -30,7 +30,7 @@
 }
 
 .logo path:nth-child(3) {
-  stroke-width: 3;
+  stroke-width: 2;
   stroke-dasharray: 116;
   stroke-dashoffset: 116;
   stroke-linecap: round;

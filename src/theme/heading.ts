@@ -9,7 +9,11 @@ const sizes = {
     fontSize: "32px",
   },
   xl: {
-    fontSize: "70px",
+    fontSize: "50px",
+  },
+  xxl: {
+    fontSize: "80px",
+    lineHeight: "90px",
   },
 };
 

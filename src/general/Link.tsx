@@ -10,8 +10,9 @@ type LinkProps = {
 } & BaseLinkProps;
 
 export function Link({ children, href, ...others }: LinkProps) {
+  const linkProps = others?.isExternal ? { target: "_blank" } : {};
   return (
-    <NextLink href={href} passHref>
+    <NextLink href={href} passHref {...linkProps}>
       <ChakraLink {...others}>{children}</ChakraLink>
     </NextLink>
   );

@@ -93,18 +93,20 @@ export default function NavBar() {
       <Logo />
       {isDesktopView ? (
         <>
-          <Flex gap={5} alignItems="center">
+          <Flex gap={8} alignItems="center">
             {NAV_LINKS.map((link, index) => (
               <NavLink {...link} key={index} index={index} />
             ))}
-            <Button data-aos="fade-down" data-aos-delay={500}>
-              Resume
-            </Button>
+            <Link download href="/assets/Resume.pdf" isExternal>
+              <Button data-aos="fade-down" data-aos-delay={500}>
+                Resume
+              </Button>
+            </Link>
           </Flex>
         </>
       ) : (
         <>
-          <Button variant="unstyled" data-aos="fade-down">
+          <Button variant="unstyled" data-aos="fade-down" padding={0}>
             <RxHamburgerMenu
               size={40}
               ref={btnRef}
@@ -135,7 +137,15 @@ export default function NavBar() {
                 {NAV_LINKS.map((link, index) => (
                   <NavLink {...link} key={index} index={index} />
                 ))}
-                <Button marginTop={20}>Resume</Button>
+                <Link download href="/assets/Resume.pdf" isExternal>
+                  <Button
+                    data-aos="fade-down"
+                    data-aos-delay={500}
+                    marginTop={20}
+                  >
+                    Resume
+                  </Button>
+                </Link>
               </DrawerBody>
             </DrawerContent>
           </Drawer>
@@ -161,7 +171,7 @@ function NavLink({ index, text, href }: INavLink): JSX.Element {
           content: `"0${index + 1}."`,
           marginRight: "5px",
           color: "green.200",
-          fontSize: { base: "16px", md: "12px" },
+          fontSize: { base: "16px", md: "14px" },
         }}
         data-aos="fade-down"
         data-aos-delay={(index + 1) * 100}
