@@ -203,7 +203,12 @@ function Project({
               {description}
             </Text>
           </Box>
-          <Flex flexWrap="wrap" width="100%" gap={2}>
+          <Flex
+            flexWrap="wrap"
+            width="100%"
+            gap={2}
+            justifyContent={isEven ? "flex-end" : "flex-start"}
+          >
             {stack.map((tech, index) => (
               <SFMono key={index} color="slate.200" size="xs">
                 {tech}
