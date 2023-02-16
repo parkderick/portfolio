@@ -23,12 +23,12 @@ export default function Experience(): JSX.Element {
   const [isDesktopView] = useMediaQuery("(min-width: 48em)");
   return (
     <SectionContainer id={NAV_EXPERIENCE_ID} alignItems="center">
-      <Flex flexDirection="column" gap={10}>
+      <Flex flexDirection="column" gap={10} width="100%">
         <SectionHeader number="02." title={`Experience`} data-aos="fade-up" />
         <Tabs
           orientation={isDesktopView ? "vertical" : "horizontal"}
           maxWidth="800px"
-          data-aos="fade-up" 
+          data-aos="fade-up"
           data-aos-delay={200}
         >
           <TabList borderColor="navy.200">
@@ -149,13 +149,8 @@ function JobExperience({
 }: IJobExperience): JSX.Element {
   return (
     <Flex flexDirection="column">
-      <H4 color="slate.100">
-        {position}
-        <H4 display="inline-flex" color="green.200">
-          &nbsp;@ {company}
-        </H4>
-      </H4>
-      <SFMono size="sm" marginTop={2}>
+      <H4 color="slate.100">{position}</H4>
+      <SFMono size="sm" marginTop={4}>
         {employmentDate}
       </SFMono>
       <Flex marginTop={4} flexDirection="column" gap={3}>

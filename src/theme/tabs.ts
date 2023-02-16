@@ -5,7 +5,7 @@ const baseStyle = {
   },
   tabpanel: {
     padding: {
-      base: '16px 0px 0px 0px',
+      base: '40px 0px 0px 0px',
       md: '0px 0px 0px 12px',
     },
   },

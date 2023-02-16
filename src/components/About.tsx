@@ -1,4 +1,4 @@
-import { Flex, Grid } from "@chakra-ui/react";
+import { Flex, Grid, useMediaQuery } from "@chakra-ui/react";
 import { SFMonoPointer } from "src/components/shared/Pointer";
 import SectionHeader from "src/components/shared/SectionHeader";
 import { NAV_ABOUT_ID } from "./NavBar";
@@ -7,6 +7,7 @@ import { Text } from "src/general/Text";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 export default function About(): JSX.Element {
+  const [isDesktopView] = useMediaQuery("(min-width: 48em)");
   return (
     <SectionContainer id={NAV_ABOUT_ID}>
       <SectionHeader number="01." title={`About Me`} data-aos="fade-up" />
@@ -20,11 +21,11 @@ export default function About(): JSX.Element {
       >
         <Flex flexDirection="column">
           <Text size="xmd">
-            Hello, my name is Derick Park, and I am a passionate React frontend engineer
-            with 2+ years of experience building dynamic and responsive web
-            applications. My passion for software engineering really stems from
-            my passion to think critically and solve problems, all while being
-            able to stay in creative control.
+            Hello, my name is Derick Park, and I am a passionate React frontend
+            engineer with 2+ years of experience building dynamic and responsive
+            web applications. My passion for software engineering really stems
+            from my passion to think critically and solve problems, all while
+            being able to stay in creative control.
             <br />
             <br />
             Throughout my career, I have honed my skills in React and its
@@ -34,10 +35,10 @@ export default function About(): JSX.Element {
             development and ensure code quality.
             <br />
             <br />
-            In my free time, I enjoy working on side projects, and staying up to date with
-            the latest trends in the frontend development community. I am always
-            excited to learn and collaborate with others to build amazing web
-            experiences.
+            In my free time, I enjoy working on side projects, and staying up to
+            date with the latest trends in the frontend development community. I
+            am always excited to learn and collaborate with others to build
+            amazing web experiences.
             <br />
             <br />
             Here are a few technologies I’ve been working with recently:
@@ -58,8 +59,8 @@ export default function About(): JSX.Element {
           loop
           src="/lottie.json"
           style={{
-            height: "400px",
-            width: "400px",
+            height: isDesktopView ? "400px" : "100%",
+            width: isDesktopView ? "400px" : "100%",
           }}
         />
       </Grid>

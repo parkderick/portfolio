@@ -1,4 +1,7 @@
 const sizes = {
+  xs: {
+    fontSize: "18px",
+  },
   sm: {
     fontSize: "22px",
   },

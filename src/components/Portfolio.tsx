@@ -1,4 +1,12 @@
-import { Box, Icon, Flex, Image, Link, Grid } from "@chakra-ui/react";
+import {
+  Box,
+  Icon,
+  Flex,
+  Image,
+  Link,
+  Grid,
+  AspectRatio,
+} from "@chakra-ui/react";
 import { H3 } from "src/general/Heading";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import SectionHeader from "src/components/shared/SectionHeader";
@@ -68,13 +76,7 @@ const PROJECTS: IProject[] = [
     title: "Toby Website",
     description:
       "Toby is a useful tool for anyone who wants to manage their browser tabs more efficiently and stay organized while browsing the web.",
-    stack: [
-      "React",
-      "React Router",
-      "SASS/SCSS",
-      "Webpack",
-      "Poet",
-    ],
+    stack: ["React", "React Router", "SASS/SCSS", "Webpack", "Poet"],
     image: "assets/tobywebsitesc.png",
     href: "https://gettoby.com/",
     github: "https://github.com/axiomzen/toby-landing",
@@ -114,15 +116,17 @@ function Project({
       gridTemplateColumns="repeat(12, 1fr)"
       data-aos={isEven ? "fade-right" : "fade-left"}
       data-aos-delay={100}
+      gridTemplateRows={{ sm: "min-content", lg: "400px" }}
     >
-      <Link
-        isExternal
-        href={href}
-        borderRadius={4}
-        position="relative"
+      <AspectRatio
+        gridColumn={{
+          base: "1 / -1",
+          lg: isEven ? LEFT_SIDE_IMAGE_COLUMN : RIGHT_SIDE_IMAGE_COLUMN,
+        }}
+        gridRow="1/1"
         width="100%"
-        height="100%"
         bgColor="green.200"
+        borderRadius={4}
         _hover={{
           bgColor: "transparent",
           [".overlay"]: {
@@ -134,37 +138,35 @@ function Project({
             mixBlendMode: "normal",
           },
         }}
-        gridColumn={{
-          base: "1 / -1",
-          lg: isEven ? LEFT_SIDE_IMAGE_COLUMN : RIGHT_SIDE_IMAGE_COLUMN,
-        }}
-        gridRow="1/1"
       >
-        <Box
-          className="image-container"
-          transition="all 0.1s cubic-bezier(0.645,0.045,0.355,1)"
-          mixBlendMode="multiply"
-          filter={{
-            base: "grayscale(100%) contrast(1) brightness(20%)",
-            lg: "grayscale(100%) contrast(1) brightness(100%)",
-          }}
-          height="100%"
-          boxShadow="0 10px 30px -15px"
-          color="navy.100"
-        >
-          <Image alt={title} src={image} objectFit="cover" height="100%" />
-        </Box>
-        <Box
-          transition="all 0.25s cubic-bezier(0.645,0.045,0.355,1)"
-          backgroundColor="#133241"
-          position="absolute"
-          width="100%"
-          height="100%"
-          top={0}
-          opacity={0.6}
-          className="overlay"
-        ></Box>
-      </Link>
+        <Link isExternal href={href} position="relative">
+          <Box
+            className="image-container"
+            transition="all 0.1s cubic-bezier(0.645,0.045,0.355,1)"
+            mixBlendMode="multiply"
+            filter={{
+              base: "grayscale(100%) contrast(1) brightness(20%)",
+              lg: "grayscale(100%) contrast(1) brightness(100%)",
+            }}
+            height="100%"
+            boxShadow="0 10px 30px -15px"
+            color="navy.100"
+          >
+            <Image alt={title} src={image} objectFit="cover" height="100%" />
+          </Box>
+          <Box
+            transition="all 0.25s cubic-bezier(0.645,0.045,0.355,1)"
+            backgroundColor="#133241"
+            position="absolute"
+            width="100%"
+            height="100%"
+            top={0}
+            opacity={0.6}
+            className="overlay"
+          ></Box>
+        </Link>
+      </AspectRatio>
+
       <Box
         position="relative"
         width="100%"
@@ -201,11 +203,13 @@ function Project({
               {description}
             </Text>
           </Box>
-          <SFMono color="slate.200" size="xs">
-            {stack.map((tech) => (
-              <>{tech}&nbsp;</>
+          <Flex flexWrap="wrap" width="100%" gap={2}>
+            {stack.map((tech, index) => (
+              <SFMono key={index} color="slate.200" size="xs">
+                {tech}
+              </SFMono>
             ))}
-          </SFMono>
+          </Flex>
           <Flex color="slate.100" gap={4} marginTop={4}>
             <Link href={github} isExternal>
               <Icon boxSize={5} as={FiGithub} />

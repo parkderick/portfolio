@@ -23,7 +23,10 @@ export default function Home() {
       <Head>
         <title>Derick Park</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no"
+        />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -50,9 +53,12 @@ export default function Home() {
         {isLoader ? (
           <Loader />
         ) : (
-          <Box>
+          <Box >
             <NavBar />
-            <Container maxW="1300px" px={{ base: "50px", md: "150px" }}>
+            <Container
+              maxW="1300px"
+              px={{ base: "25px", sm: "50px", md: "150px" }}
+            >
               <Hero />
               <About />
               <Experience />
