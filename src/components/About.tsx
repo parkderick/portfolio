@@ -8,8 +8,8 @@ import { Player } from "@lottiefiles/react-lottie-player";
 
 export default function About(): JSX.Element {
   return (
-    <SectionContainer id={NAV_ABOUT_ID} >
-      <SectionHeader number="01." title={`About Me`}  data-aos="fade-up"/>
+    <SectionContainer id={NAV_ABOUT_ID}>
+      <SectionHeader number="01." title={`About Me`} data-aos="fade-up" />
       <Grid
         color="slate.300"
         justifyItems="center"
@@ -19,14 +19,25 @@ export default function About(): JSX.Element {
         data-aos-delay={200}
       >
         <Flex flexDirection="column">
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          <Text size="xmd">
+            Hello, my name is Derick Park, and I am a passionate React frontend engineer
+            with 2+ years of experience building dynamic and responsive web
+            applications. My passion for software engineering really stems from
+            my passion to think critically and solve problems, all while being
+            able to stay in creative control.
+            <br />
+            <br />
+            Throughout my career, I have honed my skills in React and its
+            ecosystem, including React Router, React Query, Redux, NextJS,
+            Chakra UI, and more. I am also experienced in utilizing modern
+            frontend tools such as Typescript, Webpack, and ESLint to streamline
+            development and ensure code quality.
+            <br />
+            <br />
+            In my free time, I enjoy working on side projects, and staying up to date with
+            the latest trends in the frontend development community. I am always
+            excited to learn and collaborate with others to build amazing web
+            experiences.
             <br />
             <br />
             Here are a few technologies I’ve been working with recently:

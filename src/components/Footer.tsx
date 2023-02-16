@@ -1,8 +1,4 @@
-import {
-  Flex,
-  Icon,
-  useMediaQuery,
-} from "@chakra-ui/react";
+import { Flex, Icon, useMediaQuery } from "@chakra-ui/react";
 import { SFMono } from "src/general/Text";
 import { Link } from "src/general/Link";
 import React from "react";
@@ -21,8 +17,15 @@ export default function Footer(): JSX.Element | null {
           ))}
         </Flex>
       )}
-      <SFMono size="sm" marginTop={4}>Built by Derick Park</SFMono>
-      <SFMono size="sm">Designed by Brittany Chiang</SFMono>
+      <SFMono size="sm" marginTop={4}>
+        Built by Derick Park
+      </SFMono>
+      <SFMono size="sm">
+        Designed by{" "}
+        <Link isExternal href="https://brittanychiang.com/">
+          Brittany Chiang
+        </Link>
+      </SFMono>
     </Flex>
   );
 }

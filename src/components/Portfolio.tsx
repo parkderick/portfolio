@@ -18,11 +18,21 @@ interface IProject {
 const PROJECTS: IProject[] = [
   {
     company: "Dapper Labs",
+    title: "Dapper Creator",
+    description:
+      "Dapper Creator is a platform that empowers creators to build, publish, and monetize their own NFTs using Dapper Labs' proprietary technology with little to no coding experience.",
+    stack: ["Typescript", "React", "ChakraUI", "NextJS", "GraphQL", "Firebase"],
+    image: "assets/dappercreatorsc.png",
+    href: "https://genesis.seedsofhappiness.io/SeedsOfHappinessGenesis",
+    github: "https://github.com/dapperlabs/dapper-creator-platforms-app",
+  },
+  {
+    company: "Dapper Labs",
     title: "Genies Warehouse",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "The Warehouse is an NFT marketplace where you can purchase unique digital clothing for 3D Genies Avatars. In The Warehouse, you can follow the latest Drops to build your wardrobe with items like masks, shoes, backpacks, and more.",
     stack: ["Typescript", "React", "ChakraUI", "NextJS", "GraphQL"],
-    image: "assets/geniessc1.png",
+    image: "assets/geniessc.png",
     href: "https://warehouse.genies.com/collection",
     github: "https://github.com/dapperlabs/genies-app",
   },
@@ -30,36 +40,26 @@ const PROJECTS: IProject[] = [
     company: "Dapper Labs",
     title: "Laliga Golazos",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    stack: ["Typescript", "React", "NextJS"],
-    image: "assets/laligasc1.png",
+      "The LaLiga Golazos NFT marketplace offers NFT collectibles in the form of video highlights transformed into assets featuring the most iconic plays from all the clubs part of LaLiga Santander since the 2005-2006 season, as well as key plays from each matchday of the current season.",
+    stack: ["Typescript", "React", "ChakraUI", "NextJS"],
+    image: "assets/laligasc.png",
     href: "https://laligagolazos.com/",
     github: "https://github.com/dapperlabs/laliga-landing",
-  },
-  {
-    company: "Dapper Labs",
-    title: "Dapper Creator",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    stack: ["Typescript", "React", "ChakraUI", "NextJS", "GraphQL"],
-    image: "assets/dappercreatorsc1.png",
-    href: "https://genesis.seedsofhappiness.io/SeedsOfHappinessGenesis",
-    github: "https://github.com/dapperlabs/dapper-creator-platforms-app",
   },
   {
     company: "Axiom Zen",
     title: "Toby App",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Toby is a Google Chrome extension that provides users with a way to organize and manage their browser tabs more effectively. With Toby, users can save and categorize their tabs into collections or lists, which can be easily accessed and reopened at any time.",
     stack: [
-      "Javascript",
       "React",
-      "ReduxJS",
+      "Redux",
+      "Styled Components",
       "ChakraUI",
       "Webpack",
       "REST APIs",
     ],
-    image: "assets/tobyappsc1.png",
+    image: "assets/tobyappsc.png",
     href: "https://chrome.google.com/webstore/detail/toby-for-chrome/hddnkoipeenegfoeaoibdmnaalmgkpip?hl=en",
     github: "https://github.com/axiomzen/toby",
   },
@@ -67,16 +67,15 @@ const PROJECTS: IProject[] = [
     company: "Axiom Zen",
     title: "Toby Website",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Toby is a useful tool for anyone who wants to manage their browser tabs more efficiently and stay organized while browsing the web.",
     stack: [
-      "Javascript",
       "React",
       "React Router",
       "SASS/SCSS",
       "Webpack",
       "Poet",
     ],
-    image: "assets/tobywebsitesc1.png",
+    image: "assets/tobywebsitesc.png",
     href: "https://gettoby.com/",
     github: "https://github.com/axiomzen/toby-landing",
   },
@@ -198,7 +197,9 @@ function Project({
             my={2}
             zIndex={3}
           >
-            <Text color="slate.200">{description}</Text>
+            <Text color="slate.200" size="xmd">
+              {description}
+            </Text>
           </Box>
           <SFMono color="slate.200" size="xs">
             {stack.map((tech) => (

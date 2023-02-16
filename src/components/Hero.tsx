@@ -20,10 +20,7 @@ export default function Hero(): JSX.Element {
         </Box>
         <Text maxWidth={540} data-aos="fade-down" data-aos-delay={900}>
           I am a software engineer specialized in building beautiful
-          applications using modern frontend and backend technologies! My
-          passion for software engineering really stems from my passion to think
-          critically and solve problems, all while being able to stay in
-          creative control.
+          applications using modern frontend and backend technologies!
         </Text>
         <Link download href="/assets/Resume.pdf" isExternal>
           <Button data-aos="fade-down" data-aos-delay={1000}>
