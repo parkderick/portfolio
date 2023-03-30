@@ -48,12 +48,15 @@ export default function Home() {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#0a192f" />
         <meta name="theme-color" content="#0a192f" />
+        <meta property="og:title" content="Derick Park" />
+        <meta property="og:description" content="Derick Park's porfolio" />
+        <meta property="og:image" content="/ogImage.png" />
       </Head>
       <main>
         {isLoader ? (
           <Loader />
         ) : (
-          <Box >
+          <Box>
             <NavBar />
             <Container
               maxW="1300px"

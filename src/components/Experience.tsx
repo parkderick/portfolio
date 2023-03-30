@@ -49,8 +49,7 @@ export default function Experience(): JSX.Element {
                   <>
                     <Pointer>
                       Led the design and development of all Toby products:
-                      Application (Google Chrome, Firefox, Web) + Landing page,
-                      driving an increase in user base by 186%.
+                      Application (Google Chrome, Firefox, Web) + Landing page.
                     </Pointer>
                     <Pointer>
                       Executed feature requests that have the highest impact
@@ -58,8 +57,9 @@ export default function Experience(): JSX.Element {
                       team of 5.
                     </Pointer>
                     <Pointer>
-                      Developed 40+ new user-facing features and fixed 1000+
-                      bugs, increasing WAU (weekly active user) by 13%.
+                      Developed 40+ user features and fixed 1000+ bugs, driving
+                      an increase in user base by 186%, and weekly active user
+                      by 13%.
                     </Pointer>
                     <Pointer>
                       Diagnosed frame drop rates in application and implemented
@@ -68,12 +68,23 @@ export default function Experience(): JSX.Element {
                       collection and tabs.
                     </Pointer>
                     <Pointer>
-                      Translated all styles in stylesheets into 19 highly
-                      reusable UI components built upon Chakra UI.
+                      Architected a scalable design system using ChakraUI and
+                      React, which consolidated 25+ stylesheets into 19 highly
+                      reusable atomic UI components that improved styling/brand
+                      consistency and developer efficiency.
                     </Pointer>
-                    {/* <SFMono size="sm" alignSelf="flex-end">
-                    Javascript React ReduxJS ChakraUI Webpack RESTAPIs
-                  </SFMono> */}
+                    <Pointer>
+                      Implemented a suite of custom React Hooks that abstracted
+                      away state management and API handlers to reduce code
+                      duplication and improved the application's modularity,
+                      maintainability, and scalability.
+                    </Pointer>
+                    <Pointer>
+                      Developed and maintained the Redux state management
+                      system, utilizing best practices such as middlewares,
+                      selectors, actions, and reducers to optimize performance
+                      and ensure efficient data flow throughout the application.
+                    </Pointer>
                   </>
                 }
               />
@@ -88,48 +99,58 @@ export default function Experience(): JSX.Element {
                     <Pointer>
                       <Flex flexDirection="column">
                         <Text size="xmd">
-                          Developed 3 Dapper Labs products alongside an agile
-                          team of 10:
+                          Developed 3 Dapper Labs products alongside a team of
+                          10:
                         </Text>
                         <UnorderedList paddingLeft={1}>
                           <ListItem>
                             <Link href="https://warehouse.genies.com/collection">
                               Genies NFT Platform
                             </Link>
-                            : NFT marketplace for fashion collectibles for
-                            avatars
+                            : NFT platform for users to create, customize, and
+                            trade unique avatars’ fashion collectibles.
                           </ListItem>
                           <ListItem>
                             <Link href="https://laligagolazos.com/">
                               LaLiga NFT platform
                             </Link>
-                            : NFT marketplace for Laliga Moments video
-                            collectibles
+                            : NFT platform for users to collect and trade LaLiga
+                            Moments video collectibles.
                           </ListItem>
                           <ListItem>
                             <Link href="https://genesis.seedsofhappiness.io/SeedsOfHappinessGenesis">
                               Dapper Creator
                             </Link>
-                            : Platform for web3 creators to mint NFTs, monetize
+                            : NFT platform for web3 creators to mint, monetize
                             and build individualized connections with their
-                            community with no coding JobExperience.
+                            community.
                           </ListItem>
                         </UnorderedList>
                       </Flex>
                     </Pointer>
                     <Pointer>
-                      Spearheaded the design system and built highly reusable UI
-                      components that translated directly to designs, improved
-                      developer JobExperience, and standardized workflows.
+                      Led the development of a comprehensive design system,
+                      creating a library of atomic UI components that reduced UI
+                      development time by 25% and improved consistency and
+                      quality of UI design that streamlined
+                      design-to-development workflows.
                     </Pointer>
                     <Pointer>
-                      Maintained and updated the GraphQL layer to allow
-                      retrieval and updates of user interactions with Firebase
-                      database.
+                      Built scalable GraphQL APIs using Express and Firebase
+                      that enabled retrieval and seamless updates of user
+                      interactions.
                     </Pointer>
-                    {/* <SFMono size="sm" alignSelf="flex-end">
-                    Typescript React Apollo ChakraUI NextJS GraphQL Firebase
-                  </SFMono> */}
+                    <Pointer>
+                      Architected and developed a highly optimized and scalable
+                      virtualized list of NFTs on sale for the marketplace page
+                      using GraphQL and Apollo, including advanced filtering
+                      capabilities to enable efficient data retrieval and
+                      enhanced user experience.
+                    </Pointer>
+                    <Pointer>
+                      Integrated with Dapper wallet API to facilitate seamless
+                      and secure processing of cryptocurrency transactions.
+                    </Pointer>
                   </>
                 }
               />
