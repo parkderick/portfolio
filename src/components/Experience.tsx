@@ -76,7 +76,7 @@ export default function Experience(): JSX.Element {
                     <Pointer>
                       Implemented a suite of custom React Hooks that abstracted
                       away state management and API handlers to reduce code
-                      duplication and improved the application's modularity,
+                      duplication and improved the application&apos;s modularity,
                       maintainability, and scalability.
                     </Pointer>
                     <Pointer>
