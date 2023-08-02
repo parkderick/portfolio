@@ -25,6 +25,15 @@ interface IProject {
 
 const PROJECTS: IProject[] = [
   {
+    company: "Costco",
+    title: "Costco E-Commerce",
+    description:
+      "Costco is a membership-based warehouse club, known for exceptional customer service, bulk selling strategies, and delivering cost-effective solutions to diverse clientele.",
+    stack: ["React", "GatsbyJS", "ReduxSaga", "MaterialUI", "GraphQL"],
+    image: "assets/costcosc.png",
+    href: "https://www.costco.com/",
+  },
+  {
     company: "Dapper Labs",
     title: "Dapper Creator",
     description:
@@ -216,9 +225,11 @@ function Project({
             ))}
           </Flex>
           <Flex color="slate.100" gap={4} marginTop={4}>
-            <Link href={github} isExternal>
-              <Icon boxSize={5} as={FiGithub} />
-            </Link>
+            {github && (
+              <Link href={github} isExternal>
+                <Icon boxSize={5} as={FiGithub} />
+              </Link>
+            )}
             <Link href={href} isExternal>
               <Icon boxSize={5} as={FiExternalLink} />
             </Link>

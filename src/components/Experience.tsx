@@ -33,6 +33,9 @@ export default function Experience(): JSX.Element {
         >
           <TabList borderColor="navy.200">
             <Tab whiteSpace="nowrap" fontSize={14}>
+              Costco
+            </Tab>
+            <Tab whiteSpace="nowrap" fontSize={14}>
               Axiom Zen
             </Tab>
             <Tab whiteSpace="nowrap" fontSize={14}>
@@ -42,48 +45,63 @@ export default function Experience(): JSX.Element {
           <TabPanels>
             <TabPanel>
               <JobExperience
-                position="Frontend Software Engineer"
-                company="Axiom Zen"
-                employmentDate="Sept 2020 - Present"
+                position="Frontend Software Engineer II"
+                company="Costco"
+                employmentDate="June 2023 - Present"
                 responsibilities={
                   <>
                     <Pointer>
-                      Led the design and development of all Toby products:
-                      Application (Google Chrome, Firefox, Web) + Landing page.
+                      Spearheaded the migration of the existing Costco e-commerce website (91.4M monthly active users) from Websphere Commerce
+                      (WCS) to React using GatsbyJS, Redux Saga, Material UI, GraphQL.
                     </Pointer>
                     <Pointer>
-                      Executed feature requests that have the highest impact
-                      based on product metrics and user interviews with an agile
-                      team of 5.
+                      Implemented Logrocket, an application monitoring and debugging tool, across the entire Costco e-commerce platform to gain
+                      in-depth insights into user interactions, pinpoint and resolve bugs, and optimize overall website performance.
                     </Pointer>
                     <Pointer>
-                      Developed 40+ user features and fixed 1000+ bugs, driving
-                      an increase in user base by 186%, and weekly active user
-                      by 13%.
+                      Leveraged Material-UI’s extensive component library and adhered to atomic front-end practices to expedite the development
+                      process, deliver high-quality UI features and improve code maintainability.
                     </Pointer>
                     <Pointer>
-                      Diagnosed frame drop rates in application and implemented
-                      virtualized lists supporting drag-and-drop, increasing fps
-                      by 37 at a streamlined 55 fps across all quantities of
-                      collection and tabs.
+                      Utilized Redux Saga for state management, enabling smooth data flow and effective handling of asynchronous actions.
+                    </Pointer>
+                  </>
+                }
+              />
+            </TabPanel>
+
+            <TabPanel>
+              <JobExperience
+                position="Frontend Software Engineer"
+                company="Axiom Zen"
+                employmentDate="Sept 2020 - May 2023"
+                responsibilities={
+                  <>
+                    <Pointer>
+                      Led the design and development of all Toby products: Application (Google Chrome, Firefox, Web) + Landing page using
+                      Typescript, React, Redux, ChakraUI, Styled Components, Webpack, Heroku.
                     </Pointer>
                     <Pointer>
-                      Architected a scalable design system using ChakraUI and
-                      React, which consolidated 25+ stylesheets into 19 highly
-                      reusable atomic UI components that improved styling/brand
-                      consistency and developer efficiency.
+                      Executed feature requests that had the highest impact based on product metrics and user interviews with an agile team of 5.
                     </Pointer>
                     <Pointer>
-                      Implemented a suite of custom React Hooks that abstracted
-                      away state management and API handlers to reduce code
-                      duplication and improved the application&apos;s modularity,
-                      maintainability, and scalability.
+                      Developed 40+ user features, driving an increase in user base by 186%, and weekly active users by 13%.
                     </Pointer>
                     <Pointer>
-                      Developed and maintained the Redux state management
-                      system, utilizing best practices such as middlewares,
-                      selectors, actions, and reducers to optimize performance
-                      and ensure efficient data flow throughout the application.
+                      Diagnosed frame drop rates in application and implemented virtualized lists supporting drag-and-drop, increasing fps by 37 at a
+                      streamlined 55 fps across all quantities of collection and tabs.
+                    </Pointer>
+                    <Pointer>
+                      Architected a scalable design system using ChakraUI and React, which consolidated 25+ stylesheets into 19 highly reusable
+                      atomic UI components that improved styling/brand consistency and developer efficiency.
+                    </Pointer>
+                    <Pointer>
+                      Implemented a suite of custom React Hooks that abstracted away state management and API handlers to reduce code duplication
+                      and improved the application's modularity, maintainability, and scalability.
+                    </Pointer>
+                    <Pointer>
+                      Developed and maintained the Redux state management system, utilizing best practices such as middlewares, selectors, actions,
+                      and reducers to optimize performance and ensure efficient data flow throughout the application.
                     </Pointer>
                   </>
                 }
