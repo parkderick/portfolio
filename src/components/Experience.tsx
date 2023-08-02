@@ -97,7 +97,7 @@ export default function Experience(): JSX.Element {
                     </Pointer>
                     <Pointer>
                       Implemented a suite of custom React Hooks that abstracted away state management and API handlers to reduce code duplication
-                      and improved the application's modularity, maintainability, and scalability.
+                      and improved the application&apos;s modularity, maintainability, and scalability.
                     </Pointer>
                     <Pointer>
                       Developed and maintained the Redux state management system, utilizing best practices such as middlewares, selectors, actions,
