@@ -20,7 +20,7 @@ interface IProject {
   stack: string[];
   image: string;
   href: string;
-  github: string;
+  github?: string;
 }
 
 const PROJECTS: IProject[] = [
