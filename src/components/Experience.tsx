@@ -55,15 +55,21 @@ export default function Experience(): JSX.Element {
                       (WCS) to React using GatsbyJS, Redux Saga, Material UI, GraphQL.
                     </Pointer>
                     <Pointer>
+                      Utilized Redux Saga for state management, enabling smooth data flow and effective handling of asynchronous actions.
+                    </Pointer>
+                    <Pointer>
+                      Developed automated test suites using Jest and React Testing Library to ensure the reliability / functionality of React applications.
+                    </Pointer>
+                    <Pointer>
+                    Integrated accessibility best practices into web application development workflows, ensuring compliance with WCAG.
+                    </Pointer>
+                    <Pointer>
                       Implemented Logrocket, an application monitoring and debugging tool, across the entire Costco e-commerce platform to gain
                       in-depth insights into user interactions, pinpoint and resolve bugs, and optimize overall website performance.
                     </Pointer>
                     <Pointer>
                       Leveraged Material-UI’s extensive component library and adhered to atomic front-end practices to expedite the development
                       process, deliver high-quality UI features and improve code maintainability.
-                    </Pointer>
-                    <Pointer>
-                      Utilized Redux Saga for state management, enabling smooth data flow and effective handling of asynchronous actions.
                     </Pointer>
                   </>
                 }
@@ -80,9 +86,6 @@ export default function Experience(): JSX.Element {
                     <Pointer>
                       Led the design and development of all Toby products: Application (Google Chrome, Firefox, Web) + Landing page using
                       Typescript, React, Redux, ChakraUI, Styled Components, Webpack, Heroku.
-                    </Pointer>
-                    <Pointer>
-                      Executed feature requests that had the highest impact based on product metrics and user interviews with an agile team of 5.
                     </Pointer>
                     <Pointer>
                       Developed 40+ user features, driving an increase in user base by 186%, and weekly active users by 13%.
